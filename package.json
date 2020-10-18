@@ -1,0 +1,24 @@
+{
+  "name": "build-api-node-koa",
+  "version": "1.0.0",
+  "description": "CodeSeoul NodeJS Meetup",
+  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "basic": "node nodebasic.js",
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "Beege",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-joi-router": "^6.0.2"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
