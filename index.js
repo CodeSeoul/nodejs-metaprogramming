@@ -15,6 +15,8 @@ const { koaSwagger } = swaggerUiPkg;
 
 app.use(bodyParser());
 app.use(router.middleware());
+// This sets up our swagger UI at http://localhost:3000/swagger
+// The swaggerOptions.url bit tells the UI where our JSON spec is
 app.use(koaSwagger({
     routePrefix: '/swagger',
     swaggerOptions: {

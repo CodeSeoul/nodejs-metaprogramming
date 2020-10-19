@@ -1,6 +1,7 @@
 'use strict';
 
 import joiRouter from 'koa-joi-router';
+// Import the controllers and models we created
 import { getBookList, createBook } from '../controllers/books.js';
 import { BookModel, NewBookModel, BookModelList } from '../models/books.js';
 
@@ -16,12 +17,13 @@ const router = joiRouter();
 
 // This is a router similar to before, but now 
 // we're adding the "meta" value to the route object.
-
 router.route({
   meta: {
     swagger: {
+      // This data will show up in Swagger
       summary: "Get a list of books",
       description: "Returns a list of books with data",
+      // The tags are used for categorizing endpoints
       tags: ["books"]
     }
   },
@@ -33,13 +35,14 @@ router.route({
   validate: {
     output: {
       200: {
+        // ref is used by Swagger to reference a model
+        // rather than repeat its definition
         body: BookModelList,
         ref: "#/definitions/BookList"
       }
     },
   },
   handler: getBookList
-
 });
 
 router.route({
@@ -53,6 +56,8 @@ router.route({
   method: 'post',
   path: '/books',
   validate: {
+    // In this case, we're validating input in addition
+    // to output
     type: 'json',
     body: NewBookModel,
     ref: '#/definitions/NewBook',
@@ -79,11 +84,12 @@ const spec = generator.generateSpec({
     version: '1.1'
   },
   basePath: '/',
+  // Remember how tags categorize the endpoints?
   tags: [{
     name: 'books',
     description: `A Book.`
   }],
-  // pass `definitions` if you need schema references
+  // Listing our models here allows us to use "ref" like above
   definitions: {
     BookList: BookModelList,
     NewBook: NewBookModel,
@@ -93,6 +99,9 @@ const spec = generator.generateSpec({
   defaultResponses: {
     200: {
       description: 'OK'
+    },
+    201: {
+      description: 'CREATED'
     },
     500: {
       description: 'ERROR'
@@ -107,8 +116,4 @@ router.get('/_api.json', async ctx => {
   ctx.body = JSON.stringify(spec, null, '  ');
 });
 
-// Anything other than the above method/path combinations will produce an error.
-
-// Now that we've defined our routes, lets export our router object for use
-// in our index.js as a middleware.
 export default router;
