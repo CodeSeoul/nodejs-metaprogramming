@@ -6,9 +6,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "basic": "node nodebasic.js",
     "start": "node index.js",
-    "test": "jest"
+    "test": "echo 'No tests for this demo' && exit 1"
   },
   "author": "Beege",
   "license": "ISC",
@@ -18,8 +17,5 @@
     "koa-joi-router": "^6.0.2",
     "koa-joi-router-docs": "^1.2.1",
     "koa2-swagger-ui": "^5.0.2"
-  },
-  "devDependencies": {
-    "jest": "^26.4.2"
   }
 }
