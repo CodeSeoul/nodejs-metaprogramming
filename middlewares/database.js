@@ -1,6 +1,6 @@
 'use strict';
 
-import DatabaseWrapper from '../connectors/database';
+import DatabaseWrapper from '../connectors/database.js';
 import * as Koa from 'koa';
 
 /**
@@ -8,7 +8,7 @@ import * as Koa from 'koa';
  * @param {Koa.Context} ctx 
  * @param {Koa.Next} next 
  */
-function middleware(ctx, next) {
+async function middleware(ctx, next) {
     try {
         /** @type {DatabaseConnection} ctx.db */
         ctx.db = DatabaseWrapper.getConnection();

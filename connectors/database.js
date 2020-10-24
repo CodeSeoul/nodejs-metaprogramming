@@ -1,12 +1,12 @@
 'use strict';
 
-import createPool from 'mysql2/promise';
-import config from '../config/database';
+import mysql2 from 'mysql2/promise';
+import config from '../config/database.js';
 
 class DatabaseWrapper {
     constructor() {
-        /** @type {mysql2.promise.Pool}  */
-        this.pool = createPool({
+        /** @type {mysql2.Pool}  */
+        this.pool = mysql2.createPool({
             ...config
         });
     }
@@ -74,7 +74,7 @@ class DatabaseWrapper {
 
 class DatabaseConnection {
     /**
-     * @param {mysql2.promise.PoolConnection}
+     * @param {mysql2.PoolConnection}
      */
     constructor(connection) {
         this.connection = connection;

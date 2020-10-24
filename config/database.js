@@ -6,5 +6,5 @@ export default {
     user: process.env.DATABASE_USERNAME,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_SCHEMA || 'app',
-    timezone: process.env.TZ || 'Asia/Seoul'
+    timezone: process.env.TZ || '+09:00'
 };

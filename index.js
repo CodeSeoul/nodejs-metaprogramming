@@ -1,15 +1,17 @@
 'use strict';
 
-import * as Koa from 'koa';
+import Koa from 'koa';
 const app = new Koa();
 
 import bodyParser from 'koa-bodyparser';
 import router from './routes/index.js';
+import databaseMiddleware from './middlewares/database.js';
 
 import swaggerUiPkg from 'koa2-swagger-ui';
 const { koaSwagger } = swaggerUiPkg;
 
 app.use(bodyParser());
+app.use(databaseMiddleware());
 app.use(router.middleware());
 app.use(koaSwagger({
     routePrefix: '/swagger',
