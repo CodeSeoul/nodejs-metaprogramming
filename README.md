@@ -21,3 +21,4 @@ The server will not run in its current state. You should check out the `tools` b
 * [nodemon](https://nodemon.io/)
 ### Other
 * [Homebrew](https://brew.sh/) (OS X / Linux) / [Choco](https://chocolatey.org/) (Windows)
+* [JSDoc](https://jsdoc.app/)
