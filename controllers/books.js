@@ -1,17 +1,18 @@
 'use strict';
 
 export async function getBookList(ctx) {
+    const countPerPage = ctx.request.query.countPerPage;
     const page = ctx.request.query.page;
-    const offset = ctx.request.query.countPerPage * page;
+    const offset = countPerPage * page;
 
     let results;
     try {
-        [ results ] = await ctx.db.execute(
-            'select id, title from books limit :page offset :offset',
+        results = (await ctx.db.execute(
+            'select id, title from books limit :countPerPage offset :offset',
             {
-                page,
+                countPerPage,
                 offset
-            });
+            })).results;
     } catch(e) {
         ctx.throw(e);
     }
