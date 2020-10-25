@@ -11,7 +11,7 @@ import * as Koa from 'koa';
 async function middleware(ctx, next) {
     try {
         /** @type {DatabaseConnection} ctx.db */
-        ctx.db = DatabaseWrapper.getConnection();
+        ctx.db = await DatabaseWrapper.getConnection();
     } catch(e) {
         ctx.throw(e);
     }
