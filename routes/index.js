@@ -21,11 +21,11 @@ router.route({
   },
   method: 'get',
   path: '/books',
-  query: Joi.object({
-    page: Joi.number().integer().default(0),
-    countPerPage: Joi.number().integer().default(20)
-  }),
   validate: {
+    query: {
+      page: Joi.number().integer().default(0),
+      countPerPage: Joi.number().integer().default(20)
+    },
     output: {
       200: {
         body: BookModelList,
