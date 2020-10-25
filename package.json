@@ -7,7 +7,11 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "test": "echo 'No tests for this demo' && exit 1"
+    "start:dev": "docker-compose up -d && nodemon index.js",
+    "test": "jest",
+    "_postinstall": "husky install",
+    "prepublish": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "author": "Beege",
   "license": "ISC",
@@ -18,5 +22,13 @@
     "koa-joi-router-docs": "^1.2.1",
     "koa2-swagger-ui": "^5.0.2",
     "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.0",
+    "husky": "^5.0.0-beta.0",
+    "jest": "^26.6.1",
+    "nodemon": "^2.0.6",
+    "pinst": "^2.0.0",
+    "supertest": "^5.0.0"
   }
 }

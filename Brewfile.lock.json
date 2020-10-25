@@ -1,0 +1,97 @@
+{
+  "entries": {
+    "brew": {
+      "direnv": {
+        "version": "2.23.1",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/home/linuxbrew/.linuxbrew",
+          "files": {
+            "catalina": {
+              "url": "https://linuxbrew.bintray.com/bottles/direnv-2.23.1.catalina.bottle.tar.gz",
+              "sha256": "4cc10d8fad64eb6d5f9a0eee257c77c7d812a0a6ea6d53439e001bf023ac1bf1"
+            },
+            "mojave": {
+              "url": "https://linuxbrew.bintray.com/bottles/direnv-2.23.1.mojave.bottle.tar.gz",
+              "sha256": "1307aa1a9a14aa8e4b04abc444d2d36c199c4ff8466d2ef3fba115b61e12ef21"
+            },
+            "high_sierra": {
+              "url": "https://linuxbrew.bintray.com/bottles/direnv-2.23.1.high_sierra.bottle.tar.gz",
+              "sha256": "d7cc71241d1e4656598051536dfb30f0d2ef18bf9134e3e899ff3ada3888cd6a"
+            },
+            "x86_64_linux": {
+              "url": "https://linuxbrew.bintray.com/bottles/direnv-2.23.1.x86_64_linux.bottle.tar.gz",
+              "sha256": "0c3fbd6a853891b7db94a250e1998138a761067b09bde78266eb7035f113ac9f"
+            }
+          }
+        }
+      },
+      "eslint": {
+        "version": "7.11.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/home/linuxbrew/.linuxbrew",
+          "files": {
+            "catalina": {
+              "url": "https://linuxbrew.bintray.com/bottles/eslint-7.11.0.catalina.bottle.tar.gz",
+              "sha256": "5e5c17351f44053f30e59029510abb3f834eb10b406cd4b9f6625ce535490270"
+            },
+            "mojave": {
+              "url": "https://linuxbrew.bintray.com/bottles/eslint-7.11.0.mojave.bottle.tar.gz",
+              "sha256": "c459dda58ac19bf26a1298a28de6cf34a0f05de290d0c181e5fd16bdcae86caf"
+            },
+            "high_sierra": {
+              "url": "https://linuxbrew.bintray.com/bottles/eslint-7.11.0.high_sierra.bottle.tar.gz",
+              "sha256": "2c9bdf660e74a6318353bc883a622abaf86e6589b8c141462704fff36b75bd3d"
+            },
+            "x86_64_linux": {
+              "url": "https://linuxbrew.bintray.com/bottles/eslint-7.11.0.x86_64_linux.bottle.tar.gz",
+              "sha256": "a47215d08fef16ea3ae296ea34f808d31c871ff4811ee8c3373e71c20d4d1637"
+            }
+          }
+        }
+      },
+      "prettier": {
+        "version": "2.1.2",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/home/linuxbrew/.linuxbrew",
+          "files": {
+            "catalina": {
+              "url": "https://linuxbrew.bintray.com/bottles/prettier-2.1.2.catalina.bottle.tar.gz",
+              "sha256": "a6c2cba9cc1c728bba5ba5da6c1bc027bc84d55f46412e79c5e765a27931a757"
+            },
+            "mojave": {
+              "url": "https://linuxbrew.bintray.com/bottles/prettier-2.1.2.mojave.bottle.tar.gz",
+              "sha256": "db352c62163a79526804d34dd2b706822c0bf9fe655b8f8a32da6448e589cf16"
+            },
+            "high_sierra": {
+              "url": "https://linuxbrew.bintray.com/bottles/prettier-2.1.2.high_sierra.bottle.tar.gz",
+              "sha256": "9c7a4564fdae7ab384e2c191fc6d367040293053e6a91601bfee1ae47b57a483"
+            },
+            "x86_64_linux": {
+              "url": "https://linuxbrew.bintray.com/bottles/prettier-2.1.2.x86_64_linux.bottle.tar.gz",
+              "sha256": "93d4753e1d56d533a5a4630b0477f66bb49055ab9df385f653c8b0506cef841f"
+            }
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "linux": {
+      "Ubuntu 16.04.4 LTS (xenial)": {
+        "HOMEBREW_VERSION": "2.5.6",
+        "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
+        "Homebrew/linuxbrew-core": "4ab69b421cd80c0aae360b750a81a61752844a55",
+        "GCC": "5.4.0"
+      },
+      "Ubuntu 18.04.1 LTS (bionic)": {
+        "HOMEBREW_VERSION": "2.5.6",
+        "HOMEBREW_PREFIX": "/home/linuxbrew/.linuxbrew",
+        "Homebrew/linuxbrew-core": "0132f1e5d0a1cd6ba9f16d9a8b02e7554ec1bf54",
+        "GCC": "7.5.0"
+      }
+    }
+  }
+}
