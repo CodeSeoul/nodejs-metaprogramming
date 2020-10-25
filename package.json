@@ -12,7 +12,7 @@
     "_postinstall": "husky install",
     "prepublish": "pinst --disable",
     "postpublish": "pinst --enable",
-    "lint": "eslint ."
+    "lint": "eslint . --fix"
   },
   "author": "Beege",
   "license": "ISC",
@@ -46,17 +46,16 @@
     },
     "env": {
       "node": true,
-      "es6": true,
+      "es2020": true,
       "jest": true
     }
   },
   "prettier": {
     "printWidth": 100,
-    "tabWidth": 4,
+    "tabWidth": 2,
     "useTabs": false,
     "semi": true,
     "singleQuote": true,
-    "trailingComma": "none",
     "bracketSpacing": true,
     "arrowParents": "avoid"
   },
@@ -76,17 +75,17 @@
     "testEnvironment": "node",
     "verbose": true,
     "setupFilesAfterEnv": [
-        "jest-extended"
+      "jest-extended"
     ],
     "collectCoverageFrom": [
-        "!**/node_modules/**",
-        "!**/test/**"
+      "!**/node_modules/**",
+      "!**/test/**"
     ],
     "testPathIgnorePatterns": [
-        "/node_modules"
+      "/node_modules"
     ],
     "testMatch": [
-        "<rootDit>/test/**/?(*.)+(spec|test).js?(x)"
+      "<rootDit>/test/**/?(*.)+(spec|test).js?(x)"
     ]
   }
 }

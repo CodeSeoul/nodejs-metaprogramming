@@ -24,7 +24,7 @@ We're assuming you've already installed Docker. If you haven't, you should go do
         * zsh: `eval "$(direnv hook zsh)" && echo eval "$(direnv hook bash)" >> ~/.zshrc`
         * fish: `eval (direnv hook fish) && echo eval "(direnv hook bash)" >> ~/.config/fish/config.fish`
         * Not sure which shell you're using? Run `echo "${SHELL}"`
-3. (Assuming Ubuntu) Install Docker: 
+3. (Assuming Ubuntu) Install Docker:
     ```
     sudo apt-get update
     sudo apt-get install \

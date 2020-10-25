@@ -3,8 +3,8 @@ create table books (
     title varchar(255) not null
 );
 
-insert into books (title) 
-values 
+insert into books (title)
+values
     ('Programming: An Introduction'),
     ('Software Design: Like a Boss'),
     ('Colons: Because');
