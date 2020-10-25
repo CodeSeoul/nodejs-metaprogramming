@@ -4,7 +4,10 @@ This respository is a simple REST API using NodeJS and Koa used to demonstrate s
 ## Setup
 We're assuming you've already installed Docker. If you haven't, you should go do that now.
 ### Windows
-
+1. Install Chocolatey using an Administrative Shell:
+    * Cmd: `@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"`
+    * Powershell: `Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`
+2. Install tools with `choco install packages.config`
 ### OS X
 1. Install Brew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
     * It will output some directions when it finishes. You should follow them.
