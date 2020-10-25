@@ -20,9 +20,9 @@ We're assuming you've already installed Docker. If you haven't, you should go do
     * It will output some directions when it finishes. You should follow them.
 2. Install tools from Brewfile: `brew bundle`
     * For direnv to work, you need to setup the hook...
-        * bash: `eval "$(direnv hook bash)"`
-        * zsh: `eval "$(direnv hook zsh)"`
-        * fish: `eval (direnv hook fish)`
+        * bash: `eval "$(direnv hook bash)" && echo eval "$(direnv hook bash)" >> ~/.bashrc`
+        * zsh: `eval "$(direnv hook zsh)" && echo eval "$(direnv hook bash)" >> ~/.zshrc`
+        * fish: `eval (direnv hook fish) && echo eval "(direnv hook bash)" >> ~/.config/fish/config.fish`
         * Not sure which shell you're using? Run `echo "${SHELL}"`
 3. (Assuming Ubuntu) Install Docker: 
     ```
