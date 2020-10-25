@@ -41,12 +41,12 @@ export async function getBookList(ctx) {
 export async function createBook(ctx) {
     let results;
     try {
-        [ results ] = await ctx.db.execute(
-            'insert into books (title) values (:title)',
-            {
-                title: ctx.request.body.title
-            }
-            );
+        results = (await ctx.db.execute(
+                'insert into books (title) values (:title)',
+                {
+                    title: ctx.request.body.title
+                }
+            )).results;
     } catch(e) {
         ctx.throw(e);
     }
